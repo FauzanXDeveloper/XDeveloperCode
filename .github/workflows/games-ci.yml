@@ -24,4 +24,4 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest discover -s tests -p "test_example.py" # Adjust the path to your test directory if needed
+          python -m unittest test_example.py # Adjust the path to your test directory if needed
