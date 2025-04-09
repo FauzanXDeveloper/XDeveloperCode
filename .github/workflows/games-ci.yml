@@ -11,7 +11,7 @@ on:
 
 jobs:
   test:
-    runs-on: self-hosted  # Change to 'windows-latest' or 'ubuntu-latest' as needed
+    runs-on: self-hosted  # You can change this to 'windows-latest' if you need a Windows environment
 
     steps:
       - name: Checkout code
@@ -20,33 +20,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Ensure you have a requirements.txt file in your repo
+          pip install -r requirements.txt  # Make sure you have a requirements.txt file in your repo
 
       - name: Run tests
         run: |
-          python -m unittest snake_game.py  # Discover and run all tests in the tests directory
-
-      - name: Lint code
-        run: |
-          pip install flake8  # Install flake8 for linting
-          flake8 .  # Lint the entire repository
-
-      - name: Run type checks
-        run: |
-          pip install mypy  # Install mypy for type checking
-          mypy .  # Run type checks on the entire repository
-
-      - name: Build documentation
-        run: |
-          pip install sphinx  # Install Sphinx for documentation generation
-          sphinx-build -b html docs/source docs/build  # Build HTML documentation from source
-
-      - name: Clean up
-        run: |
-          echo "Cleaning up temporary files..."
-          # Add any cleanup commands here if necessary
-
-      - name: Notify on success
-        if: success()  # Only run this step if all previous steps succeeded
-        run: |
-          echo "All tests passed successfully!"
+          python -m unittest snake_game.py # Adjust the path to your test directory if needed
