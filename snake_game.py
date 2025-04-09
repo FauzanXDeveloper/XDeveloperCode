@@ -41,7 +41,7 @@ def gameLoop():
     game_close = False
     
     x1 = display_width /4
-    y1 = display_heigth / 4
+    y1 = display_heigth / 2
     
     x1_change = 0
     y1_change = 0
