@@ -2,10 +2,10 @@ import unittest
 import pygame
 import random
 
-# Import the necessary functions or classes from your snake game file
-from snake_game import Your_score, our_snake  # Adjust this import based on your actual game code
 
-# Mocking the Pygame functions for testing
+from snake_game import Your_score, our_snake 
+
+
 class TestSnakeGame(unittest.TestCase):
 
     def setUp(self):
