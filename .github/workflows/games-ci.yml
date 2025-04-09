@@ -11,7 +11,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # You can change this to 'windows-latest' if you need a Windows environment
+    runs-on: self-hosted  # You can change this to 'windows-latest' if you need a Windows environment
 
     steps:
       - name: Checkout code
